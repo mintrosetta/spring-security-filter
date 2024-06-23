@@ -1,0 +1,18 @@
+Application Filter Chain
+	ใช้จัดการกับกลุ่มของ servlet filter เช่น
+		- CharacterEncodingFilter
+		- FormContentFilter
+		- RequestContextFilter
+
+Dispatcher Servlet
+	เป็นส่วนสำคัญของ Spring Framework ที่ใช้ในการพัฒนาเว็บแอปพลิเตชันแบบ MVC
+	โดยจะทำหน้าที่จัดการ request และ response และควบคุมการไกลของข้อมูลระหว่างส่วนต่าง ๆ ระหว่าง 
+	Model, View, Controller
+	
+	โดยมีขั้นตอนดังนี้
+		1. เมื่อ client ส่งคำขอมา จะเข้ามาที่ Dispatcher Servlet
+		2. Dispatcher Servlet จะใช้ HandlerMapping ค้นหา Controller ที่จะจัดการคำขอนั้น
+		3. เมื่อพย Controller จะส่ง request ไปยัว controller นั้นเพื่อดำเนินการ logic
+		4. ดำเนินการประมวลผลคำขอตาม business logic
+		5. DispatcherServlet จะใช้ ViewResolver ในการหา View ที่เหมาะสมตามชื่อของ controller
+		6. DispatcherServlet จะส่ง view พร้อมข้อมูลที่จำเป็นไปให้ผู้ใช้
