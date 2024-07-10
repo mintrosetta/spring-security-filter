@@ -1,0 +1,12 @@
+Servlet Context (Embedded Servlet Container)
+
+DelegatinhFilterProxy
+
+FilterChainProxy
+    จัดเก็บรายการของ SecurityFilterChain 
+
+SecurityFilterChain
+    จัดเก็บ Filter เช่น 
+        - UsernamePasswordAuthenticationFilter
+        - BasicAuthenticationFilter
+        - AuthorizationFilter
